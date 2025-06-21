@@ -13,8 +13,9 @@ function addStyleSheet() {
   document.body.appendChild(styleElement);
   const stylesheet = document.styleSheets[0];
   stylesheet.insertRule("p { color: red }", 0);
-  stylesheet.insertRule("p { display: inline-block}", 1);
-  stylesheet.insertRule("p { margin-right: 5px}", 2);
+  stylesheet.insertRule("p { font-weight: bold }", 1);
+  stylesheet.insertRule("p { display: inline-block}", 2);
+  stylesheet.insertRule("p { margin-right: 5px}", 3);
 }
 
 /** Create paragraph for text
