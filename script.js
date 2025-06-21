@@ -34,4 +34,4 @@ function createPage() {
   addButton();
 }
 
-document.addEventListener("load", createPage());
+// document.addEventListener("load", createPage());
