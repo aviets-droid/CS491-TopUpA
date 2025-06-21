@@ -1,7 +1,13 @@
+// Aisling Viets
+// 6/20/25
+// Quiz Top-Up A
+
+/** Todo when button is pressed */
 function buttonClick() {
   alert("This is Aisling");
 }
 
+/** Create and configure CSS style sheet */
 function addStyleSheet() {
   const styleElement = document.createElement("style");
   document.body.appendChild(styleElement);
@@ -11,27 +17,33 @@ function addStyleSheet() {
   stylesheet.insertRule("p { margin-right: 5px}", 2);
 }
 
-function addText() {
+/** Create paragraph for text
+ * @param {string} content
+ */
+function addText(content) {
   const text = document.createElement("p");
   text.id = "txt";
-  text.textContent = "Hello";
+  text.textContent = content;
   document.body.appendChild(text);
 }
 
-function addButton() {
+/** Create button with delay (ms) on click
+ * @param {string} content
+ * @param {number} delay
+ */
+function addButton(content, delay) {
   const button = document.createElement("button");
   button.id = "btn";
-  button.textContent = "Professor";
+  button.textContent = content;
   button.addEventListener("click", function() {
-    setTimeout(buttonClick, 1000);
+    setTimeout(buttonClick, delay);
   });
   document.body.appendChild(button);
 }
 
+/** Runs all functions to create the page */
 function createPage() {
   addStyleSheet();
-  addText();
-  addButton();
+  addText("Hello");
+  addButton("Professor", 1000);
 }
-
-// document.addEventListener("load", createPage());
